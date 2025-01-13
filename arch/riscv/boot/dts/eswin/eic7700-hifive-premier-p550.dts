@@ -85,6 +85,11 @@
 			no-map;
 			reg = <0x0 0xfffff000 0x0 0x1000>;
 		};
+
+		trace_4g {
+			no-map;
+			reg = <0x01 0x00000000 0x01 0x0000>;
+		};
 	};
 
 	soc {
@@ -94,6 +99,12 @@
 					 <&d0_reset SCPU_RST_CTRL SW_SCPU_CORE_RSTN>,
 					 <&d0_reset SCPU_RST_CTRL SW_SCPU_DBG_RSTN>;
 			reset-names = "bus", "core", "dbg";
+		};
+
+		pmem_trace@100000000 {
+			compatible = "pmem-region";
+			reg = <0x01 0x00000000 0x01 0x00000000>;
+			volatile;
 		};
 	};
 };
