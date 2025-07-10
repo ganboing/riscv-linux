@@ -109,6 +109,7 @@ ENTRY(__kvm_riscv_switch_to)
 	REG_L	a0, (KVM_ARCH_GUEST_A0)(a0)
 
 	/* Resume Guest */
+__kvm_switch_resume:
 	sret
 
 	/* Back to Host */
