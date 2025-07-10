@@ -12,6 +12,7 @@
 #include <asm/hwcap.h>
 #include <asm/processor.h>
 #include <asm/ptrace.h>
+#include <asm/smp.h>
 #include <asm/csr.h>
 
 #ifdef CONFIG_FPU
